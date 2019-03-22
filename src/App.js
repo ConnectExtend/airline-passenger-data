@@ -7,6 +7,7 @@ class App extends Component {
       firstName: '',
       lastName: '',
       age: '',
+      gender: '',
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -64,6 +65,33 @@ class App extends Component {
           </label>
           <br />
 
+          <fieldset>
+            <legend>Gender</legend>
+            <label>
+              <input
+                required
+                type="radio"
+                name="gender"
+                value="female"
+                checked={this.state.gender === 'female'}
+                onChange={this.handleChange}
+              />
+              Female
+            </label>
+            <label>
+              <input
+                required
+                type="radio"
+                name="gender"
+                value="male"
+                checked={this.state.gender === 'male'}
+                onChange={this.handleChange}
+              />
+              Male
+            </label>
+          </fieldset>
+          <br />
+
           <button>SUBMIT</button>
         </form>
         <hr />
@@ -72,6 +100,7 @@ class App extends Component {
           Your name: {this.state.firstName} {this.state.lastName}
         </p>
         <p>Your age: {this.state.age}</p>
+        <p>Your gender: {this.state.gender}</p>
       </main>
     );
   }
