@@ -166,7 +166,6 @@ class App extends Component {
             </label>
           </fieldset>
           <br />
-
           <button>SUBMIT</button>
         </form>
         <hr />
@@ -192,3 +191,7 @@ class App extends Component {
 }
 
 export default App;
+
+/**
+ * TODO: experiment with spread operator for dietary restrictions section
+ */
