@@ -8,6 +8,7 @@ class App extends Component {
       lastName: '',
       age: '',
       gender: '',
+      destination: '',
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -92,6 +93,24 @@ class App extends Component {
           </fieldset>
           <br />
 
+          <label htmlFor="destination">Destination:</label>
+          <select
+            required
+            name="destination"
+            id="destination"
+            value={this.state.destination}
+            onChange={this.handleChange}
+          >
+            <option value="">
+              -- Please select your destination --
+            </option>
+            <option value="buenos aires">Buenos Aires</option>
+            <option value="honolulu">Honolulu</option>
+            <option value="prague">Prague</option>
+          </select>
+
+          <br />
+
           <button>SUBMIT</button>
         </form>
         <hr />
@@ -101,6 +120,11 @@ class App extends Component {
         </p>
         <p>Your age: {this.state.age}</p>
         <p>Your gender: {this.state.gender}</p>
+
+        <p>
+          Your destination: {this.state.destination.toUpperCase()}
+        </p>
+        <p>Your dietary restrictions: {}</p>
       </main>
     );
   }
