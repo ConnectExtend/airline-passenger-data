@@ -23,35 +23,39 @@ class App extends Component {
   render() {
     return (
       <main>
+        <h1>Golden Sky Passenger Data</h1>
         <form>
-          <label>
+          <label htmlFor="firstName">
             First Name:
             <input
               required
               type="text"
               name="firstName"
+              id="firstName"
               value={this.state.firstName}
               onChange={this.handleChange}
             />
           </label>
           <br />
-          <label>
+          <label htmlFor="lastName">
             Last Name:
             <input
               required
               type="text"
               name="lastName"
+              id="lastName"
               value={this.state.lastName}
               onChange={this.handleChange}
             />
           </label>
           <br />
-          <label>
+          <label htmlFor="age">
             Age:
             <input
               required
               type="number"
               name="age"
+              id="age"
               value={this.state.age}
               min="1"
               max="199"
@@ -60,32 +64,14 @@ class App extends Component {
           </label>
           <br />
 
-          <h1>
-            {this.state.firstName} {this.state.lastName}{' '}
-            {this.state.age}
-          </h1>
-
-          {/* Create radio buttons for gender here */}
-          <br />
-
-          {/* Create select box for location here */}
-          <br />
-
-          {/* Create check boxes for dietary restrictions here */}
-          <br />
-
-          <button>Submit</button>
+          <button>SUBMIT</button>
         </form>
         <hr />
-        <h2>Entered information:</h2>
-        <p>Your name: {/* First and last name here */}</p>
-        <p>Your age: {/* Age here */}</p>
-        <p>Your gender: {/* Gender here */}</p>
-        <p>Your destination: {/* Destination here */}</p>
+        <h2>Information summary:</h2>
         <p>
-          Your dietary restrictions:
-          {/* Dietary restrictions here, comma separated */}
+          Your name: {this.state.firstName} {this.state.lastName}
         </p>
+        <p>Your age: {this.state.age}</p>
       </main>
     );
   }
