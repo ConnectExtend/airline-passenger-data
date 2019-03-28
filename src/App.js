@@ -33,7 +33,7 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h1>Golden Sky TEST Passenger Data</h1>
+        <h1>Golden Sky Passenger Data</h1>
         <form>
           <label htmlFor="firstName">
             First Name:
